@@ -1,0 +1,433 @@
+/* App.css */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: #e7e4de;
+  color: #151515;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  line-height: 1.65;
+}
+
+.site-background {
+  min-height: 100vh;
+
+  padding: 20px 150px 20px;
+  /* padding: top left-and-right bottom;*/
+}
+
+
+/* =========================
+   PAPER
+   ========================= */
+
+.paper {
+  width: min(100%, 1100px);
+
+  min-height: 1400px;
+
+  margin: 0 auto;
+
+  background: #fdfdfb;
+
+  padding: 65px 85px;
+
+  border: 1px solid #d8d5cf;
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.05),
+    0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   TOP METADATA
+   ========================= */
+
+.metadata {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 13px;
+
+  letter-spacing: 1.4px;
+
+  color: #555;
+}
+
+.header-line {
+  height: 1px;
+
+  background: #222;
+
+  margin-top: 12px;
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+  text-align: center;
+
+  padding: 55px 30px 30px;
+}
+
+.document-code {
+  font-family: "Courier New", monospace;
+
+  letter-spacing: 8px;
+
+  color: #8e211b;
+
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 5vw, 58px);
+
+  line-height: 1.05;
+
+  margin: 0 auto 25px;
+
+  max-width: 800px;
+}
+
+.title {
+
+  margin: 0;
+
+  font-size: 64px;
+
+  text-align: left;
+
+  line-height: 1;
+
+
+}
+
+.name-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.undertitle {
+
+  margin: 0 0 0;
+  font-size: 24px;
+
+  text-align: left;
+}
+
+.introduction {
+  font-size: 14px;
+  text-align: justify;
+  margin: 10px 0 0;
+}
+
+.subtitle {
+  max-width: 720px;
+
+  margin: 0 auto;
+
+  font-size: 21px;
+
+  font-style: italic;
+
+  color: #444;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.actions {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-top: 35px;
+}
+
+.button {
+  display: inline-block;
+
+  padding: 15px 28px;
+
+  border: 1px solid #111;
+
+  text-decoration: none;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  transition:
+    background 150ms ease,
+    color 150ms ease;
+}
+
+.button-primary {
+  background: #111;
+
+  color: white;
+}
+
+.button-primary:hover {
+  background: #333;
+}
+
+.button-secondary {
+  background: transparent;
+
+  color: #111;
+}
+
+.button-secondary:hover {
+  background: #111;
+
+  color: white;
+}
+
+/* =========================
+   ABSTRACT
+   ========================= */
+
+.abstract {
+  max-width: 800px;
+
+  margin: 10px auto 60px;
+}
+
+.abstract h2 {
+  text-align: center;
+
+  font-size: 17px;
+
+  margin-bottom: 12px;
+}
+
+.abstract p {
+  font-size: 18px;
+
+  text-align: justify;
+}
+
+/* =========================
+   DIVIDER
+   ========================= */
+
+hr {
+  border: none;
+
+  border-top: 1px solid #cbc7bf;
+
+  margin: 50px 0;
+}
+
+/* =========================
+   DOCUMENT SECTIONS
+   ========================= */
+
+.document-section {
+  margin-bottom: 60px;
+}
+
+.section-title {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 14px;
+}
+
+.section-title h2 {
+  font-size: 26px;
+
+  margin: 0;
+}
+
+.section-number {
+  font-family: "Courier New", monospace;
+
+  font-weight: bold;
+
+  font-size: 18px;
+
+  color: #942a22;
+}
+
+.section-intro {
+  font-style: italic;
+
+  font-size: 21px;
+
+  margin-top: 20px;
+}
+
+/* =========================
+   PROJECT
+   ========================= */
+
+.project {
+  margin-top: 35px;
+
+  padding-bottom: 30px;
+
+  border-bottom: 1px solid #ddd8cf;
+}
+
+.project-heading {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: baseline;
+
+  gap: 20px;
+}
+
+.project-heading h3 {
+  font-size: 21px;
+
+  margin: 0;
+}
+
+.project-heading span {
+  font-family: "Courier New", monospace;
+
+  font-size: 13px;
+
+  color: #777;
+}
+
+.project p {
+  font-size: 17px;
+}
+
+/* =========================
+   TAGS
+   ========================= */
+
+.tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 15px;
+}
+
+.tags span {
+  border: 1px solid #aaa;
+
+  padding: 5px 10px;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  border-top: 1px solid #222;
+
+  padding-top: 15px;
+
+  margin-top: 100px;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+
+  color: #666;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+  .site-background {
+    padding: 0;
+  }
+
+  .paper {
+    width: 100%;
+
+    padding: 35px 22px;
+
+    border: none;
+
+    box-shadow: none;
+  }
+
+  .metadata {
+    font-size: 9px;
+
+    gap: 10px;
+  }
+
+  .hero {
+    padding: 40px 0 20px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .button {
+    text-align: center;
+  }
+
+  .abstract p {
+    text-align: left;
+  }
+
+  .project-heading {
+    flex-direction: column;
+
+    gap: 5px;
+  }
+}
