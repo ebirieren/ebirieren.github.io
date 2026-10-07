@@ -22,7 +22,7 @@ body {
 .site-background {
   min-height: 100vh;
 
-  padding: 20px 150px 20px;
+  padding: 0px 150px 20px;
   /* padding: top left-and-right bottom;*/
 }
 
@@ -32,7 +32,7 @@ body {
    ========================= */
 
 .paper {
-  width: min(100%, 1100px);
+  width: min(100%, 800px);
 
   min-height: 1400px;
 
@@ -73,8 +73,8 @@ body {
   height: 1px;
 
   background: #222;
-
-  margin-top: 12px;
+  
+  margin-top: 0px;
 }
 
 /* =========================
@@ -84,17 +84,146 @@ body {
 .hero {
   text-align: center;
 
-  padding: 55px 30px 30px;
+  /*padding: 55px 30px 30px;*/
+}
+.contact-channels {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  width: 100%;
 }
 
+.contact-channel {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #111;
+  color: white;
+
+  transition:
+    transform 150ms ease,
+    background 150ms ease;
+}
+
+.contact-channel:hover {
+  transform: translateY(-2px);
+}
+
+.email-channel:hover {
+  background: #c5221f;
+}
+
+.linkedin-channel:hover {
+  background: #0a66c2;
+}
+
+.channel-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.mail-icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.linkedin-icon {
+  fill: currentColor;
+}
+
+.education-row {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px 5px;
+}
+
+.education-row p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.enclosed-info {
+  /*text-align: center;*/
+  /*justify-content: space-between;*/
+  font-size: 11px;
+  padding: 0 0px 0px;
+}
+
+.enclosed-info p{
+  margin: 0;
+  font-style: italic;
+}
+
+.certificate-caption{
+  font-weight: bold;
+  white-space: nowrap;
+}
 .document-code {
-  font-family: "Courier New", monospace;
 
-  letter-spacing: 8px;
+  font-size: 24px;
+  text-align: left;
+  margin: 15px 0px 0px;
+  margin-bottom: 0px;
+}
 
-  color: #8e211b;
+.experience-section{
 
-  margin-bottom: 25px;
+  display: grid;
+  text-align: left;
+  padding: 10px 0px 5px;
+  font-size: 12px;
+
+}
+
+.experience-section .company-name{
+  font-size: 18px;
+}
+
+.company-info{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  font-size: 15px;
+  margin:0 ;
+  padding: 5px 0 10px;
+}
+
+.summary{
+  padding: 0 20px 0px;
+
+}
+
+.summary p{
+  padding: 5px 0 0;
+}
+
+.projects-section{
+  display: grid;
+  text-align: left;
+  padding: 10px 0px 5px;
+  font-size: 12px;
+}
+
+.resume-project{
+display: grid;
+padding: 0px 0px 15px;
+}
+
+.project-name{
+  font-size: 16px;
+  padding: 5px 0px 5px;
 }
 
 .hero h1 {
@@ -105,6 +234,13 @@ body {
   margin: 0 auto 25px;
 
   max-width: 800px;
+}
+
+.header-columns {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
+  align-items: start;
 }
 
 .title {
@@ -130,7 +266,7 @@ body {
 
   margin: 0 0 0;
   font-size: 24px;
-
+  font-style: italic;
   text-align: left;
 }
 
@@ -143,7 +279,7 @@ body {
 .subtitle {
   max-width: 720px;
 
-  margin: 0 auto;
+  margin: 25px auto;
 
   font-size: 21px;
 
@@ -166,6 +302,53 @@ body {
   margin-top: 35px;
 }
 
+.communication-button {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1000;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 20px;
+  border: 0px solid #111;
+  border-radius: 10px;
+
+  background:#FFFFE6;
+  color: #1A1A00;
+
+  font-family: "Times New Roman", monospace;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+
+  box-shadow: 0 0px 10px #FFFF00;
+  transition:
+    transform 150ms ease,
+    background 150ms ease;
+}
+
+.communication-button:hover {
+  background: #FFFF5C;
+  transform: translateY(-2px);
+}
+
+.communication-button:focus-visible {
+  outline: 3px solid #8e211b;
+  outline-offset: 3px;
+}
+.communication-icon {
+  width: 50px;
+  height: 30px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 .button {
   display: inline-block;
 
@@ -399,14 +582,12 @@ footer {
     gap: 10px;
   }
 
-  .hero {
-    padding: 40px 0 20px;
-  }
 
-  .hero h1 {
-    font-size: 36px;
+  .hero p {
+    display: grid;
+    grid-template-columns: 0fr 0fr;
+    align-items: start;
   }
-
   .subtitle {
     font-size: 18px;
   }
